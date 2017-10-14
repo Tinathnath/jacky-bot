@@ -1,0 +1,19 @@
+{
+  "name": "jacky-bot",
+  "version": "1.0.0",
+  "description": "Votre pote / bot Discord un peu beauf",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nathan AVENEL <tinathnath@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.8.0"
+  },
+  "dependencies": {
+    "bufferutil": "^3.0.2",
+    "discord.js": "^11.2.1",
+    "node-opus": "^0.2.7"
+  }
+}
