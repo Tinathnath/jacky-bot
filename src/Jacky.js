@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const Config = require('../config');
 
-let SayCommand = require('./commands/say');
+const Commands = require('./commands/commands');
 
 module.exports = class Jacky {
     constructor(discordClient){
@@ -29,11 +29,9 @@ module.exports = class Jacky {
         let commandArgs = command.split(" ");
         let commandName = commandArgs.shift();
         
-        switch(commandName){
-            case "say":
-                SayCommand.run(message, commandArgs);
-            break;
-        }
+        if(Commands.hasOwnProperty(commandName))
+            return Commands[commandName].run(message, commandArgs);
+        
     }
 
     /**
