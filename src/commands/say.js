@@ -1,4 +1,4 @@
-require('discord.js');
+const Discord = require('discord.js');
 const util = require('util');
 const Config = require('../../config');
 const CommandHelper = require('./commandHelper');
@@ -6,7 +6,7 @@ const CommandHelper = require('./commandHelper');
 module.exports = class SayCommand {
 
     /**
-     * 
+     * Run command
      * @param {Message} message 
      * @param {string[]} args
      */

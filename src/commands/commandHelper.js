@@ -1,7 +1,7 @@
 module.exports = class CommandHelper {
 
     /**
-     * 
+     * Returns a message content without users' mentions
      * @param {String} message 
      * @param {MessageMentions} mentions 
      */
