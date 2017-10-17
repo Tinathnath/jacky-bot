@@ -30,8 +30,7 @@ module.exports = class Jacky {
         let commandName = commandArgs.shift();
         
         if(Commands.hasOwnProperty(commandName))
-            return Commands[commandName].run(message, commandArgs);
-        
+            return Commands[commandName].run(message, commandArgs);   
     }
 
     /**

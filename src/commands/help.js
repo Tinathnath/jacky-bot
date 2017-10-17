@@ -12,8 +12,9 @@ module.exports = class HelpCommand {
 \`\`\`
 Commandes de Jacky
 ******************
-?say  : Fait dire à Jacky le message que vous lui demandez aux personnes mentionnées: ?say coucou @user1 @user2
-?help : Affiche l'aide
+?say     : Fait dire à Jacky le message que vous lui demandez aux personnes mentionnées: ?say coucou @user1 @user2
+?help    : Affiche l'aide
+?spotify : Envoie un morceau avec mini-lecteur depuis une URI Spotify (spotify:track:id): ?spotify spotify:track:2R7858bg0GHuBBxjTyOL7N
 \`\`\``;
         message.reply(helpMessage);
     }
