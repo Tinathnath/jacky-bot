@@ -12,6 +12,7 @@
     "eslint": "^4.8.0"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "bufferutil": "^3.0.2",
     "discord.js": "^11.2.1",
     "node-opus": "^0.2.7"
