@@ -26,9 +26,12 @@ module.exports = class ImgurModule {
                     Accept: 'application/json'
                 }
             }).then((result) => {
-
+                if(result.status == 200)
+                    resolve(result.data.data); //first .data for Axios' Promise, second .data is in Imgur response body
+                else
+                    reject(result.statusText);
             }).catch((error) => {
-
+                reject(error);
             });
         });
 
