@@ -18,7 +18,7 @@ module.exports = class ImgurCommand {
             .then((images) => {
                 //no result
                 if(images.length < 1){
-                    message.channel.send(util.format("Aucun résultat pour `%s`", search));
+                    message.channel.send(util.format("J'ai rien trouvé pour `%s`", search));
                     return;
                 }
 
@@ -47,7 +47,7 @@ module.exports = class ImgurCommand {
                         message.channel.send(util.format("Erreur lors de la recherche de `%s`", search));      
                 }
                 else{
-                    message.channel.send(util.format("L'image est NSFW. Veuillez activer l'option `nsfw` pour ce chan."));
+                    message.channel.send(util.format("L'image est NSFW mais pas le chan, sois cohérent putain !"));
                 }
             }).catch((error) => {
                 message.channel.send(util.format("Erreur lors de la recherche de `%s`", search));
