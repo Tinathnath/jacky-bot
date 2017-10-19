@@ -16,13 +16,17 @@ module.exports = class ImgurCommand {
         let imgur = new ImgurModule(Config.IMGUR_APP_ID);
         imgur.requestGallery(search)
             .then((images) => {
+                //no result
                 if(images.length < 1){
-                    message.channel.send(util.format("Aucun résultat pour %s", search));
+                    message.channel.send(util.format("Aucun résultat pour `%s`", search));
                     return;
                 }
+
+                //pick a random image in the results
                 let index = self.random(0, images.length -1 );
                 let selected = images[index];
                 let selectedImage = null;
+
                 if(selected.is_album){
                     let idx = 0;
                     if(selected.images.length > 1)
@@ -34,7 +38,8 @@ module.exports = class ImgurCommand {
                     selectedImage = selected;
                 }
 
-                if(self.checkNSFW(message, selectedImage)){
+                //check NSFW and create embed response
+                if(self.checkNSFW(message.channel, selectedImage)){
                     let embed = self.createEmbed(selectedImage);
                     if(embed)
                         message.channel.send("", embed);
@@ -50,6 +55,10 @@ module.exports = class ImgurCommand {
             });
     }
 
+    /**
+     * Creates a Discord.RichEmbed with the image to send
+     * @param {Object} image 
+     */
     static createEmbed(image){
         let embed = new Discord.RichEmbed();
         embed.setImage(image.link);
@@ -63,13 +72,23 @@ module.exports = class ImgurCommand {
         return embed;
     }
 
-    static checkNSFW(message, image){
+    /**
+     * Checks the image can be sent if NSFW
+     * @param {Discord.Channel} channel 
+     * @param {Object} image 
+     */
+    static checkNSFW(channel, image){
         if(image.nsfw)
-            return message.channel.nsfw;
+            return channel.nsfw;
 
         return true;
     }
 
+    /**
+     * Generates a random number between min and max
+     * @param {integer} min 
+     * @param {integer} max 
+     */
     static random(min, max) {
         return Math.floor(Math.random() * (max - min) + min);
     }
