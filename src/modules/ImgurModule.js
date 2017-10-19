@@ -19,7 +19,7 @@ module.exports = class ImgurModule {
     requestGallery(search) {
         let self = this;
         let q = new Promise((resolve, reject) => {
-            let url = util.format("%s%s%s", endpoints.baseApiUrl, endpoints.galleryEndpoint, search);
+            let url = util.format("%s%s%s", endpoints.baseApiUrl, endpoints.galleryEndpoint, encodeURIComponent(search));
             Axios.get(url, {
                 headers: {
                     Authorization: util.format('Client-ID %s', self.appId),

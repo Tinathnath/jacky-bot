@@ -23,14 +23,14 @@ module.exports = class ImgurCommand {
                 }
 
                 //pick a random image in the results
-                let index = self.random(0, images.length -1 );
+                let index = CommandHelper.random(0, images.length -1 );
                 let selected = images[index];
                 let selectedImage = null;
 
                 if(selected.is_album){
                     let idx = 0;
                     if(selected.images.length > 1)
-                        idx = self.random(0, selected.images.length - 1);
+                        idx = CommandHelper.random(0, selected.images.length - 1);
 
                     selectedImage = selected.images[idx];
                 }
@@ -82,14 +82,5 @@ module.exports = class ImgurCommand {
             return channel.nsfw;
 
         return true;
-    }
-
-    /**
-     * Generates a random number between min and max
-     * @param {integer} min 
-     * @param {integer} max 
-     */
-    static random(min, max) {
-        return Math.floor(Math.random() * (max - min) + min);
     }
 }

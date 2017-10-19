@@ -15,6 +15,7 @@ Commandes de Jacky
 ?say     : Fait dire à Jacky le message que vous lui demandez aux personnes mentionnées: ?say coucou @user1 @user2
 ?spotify : Envoie un morceau avec mini-lecteur depuis une URI Spotify (spotify:track:id): ?spotify spotify:track:2R7858bg0GHuBBxjTyOL7N
 ?get     : Recherche une image sur Reddit (bot-à-putes): ?get cat
+?joke    : Raconte une blague (Attention: haut niveau)
 ?help    : Affiche l'aide
 \`\`\``;
         message.reply(helpMessage);
