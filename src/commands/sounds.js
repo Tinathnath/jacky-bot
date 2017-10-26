@@ -11,5 +11,8 @@ module.exports = {
     gros : 'on_en_a_gros.mp3',
     questcedire : 'qu-est_ce_dire_que_ceci.mp3',
     tut: 'petite_corne.mp3',
-    tg: 'tu_la_fermes_definitivement.mp3'
+    tg: 'tu_la_fermes_definitivement.mp3',
+    nils: 'nils.mp3',
+    philippe: 'philippe.mp3',
+    ballec: 'ballec.mp3'
 }
