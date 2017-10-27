@@ -14,5 +14,9 @@ module.exports = {
     tg: 'tu_la_fermes_definitivement.mp3',
     nils: 'nils.mp3',
     philippe: 'philippe.mp3',
-    ballec: 'ballec.mp3'
+    ballec: 'ballec.mp3',
+    ah: 'ah.mp3',
+    ahah: 'nelson.mp3',
+    meurs: 'pourriture.mp3',
+    fire: 'feu.mp3'
 }
