@@ -14,7 +14,7 @@ module.exports = class ImgurCommand {
         let self = this;
         let search = CommandHelper.removeMessageMentions(args.join(" "), message.mentions);
         let imgur = new ImgurModule(Config.IMGUR_APP_ID);
-        imgur.requestGallery(search)
+        imgur.requestGallery(encodeURIComponent(search))
             .then((images) => {
                 //no result
                 if(images.length < 1){
