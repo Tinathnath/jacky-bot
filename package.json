@@ -4,7 +4,8 @@
   "description": "Votre pote / bot Discord un peu beauf",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "Nathan AVENEL <tinathnath@gmail.com>",
   "license": "ISC",
@@ -15,6 +16,8 @@
     "axios": "^0.16.2",
     "bufferutil": "^3.0.2",
     "discord.js": "^11.2.1",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
     "ffmpeg-binaries": "^3.2.2-3",
     "node-opus": "^0.2.7"
   }
