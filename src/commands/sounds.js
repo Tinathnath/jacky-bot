@@ -15,7 +15,7 @@ module.exports = {
     philippe: 'philippe.mp3',
     ballec: 'ballec.mp3',
     ah: 'ah.mp3',
-    ahah: 'nelson.mp3',
+    ahah: 'Nelson.mp3',
     meurs: 'pourriture.mp3',
     fire: 'feu.mp3'
 }
